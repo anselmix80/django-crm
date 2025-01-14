@@ -62,7 +62,7 @@ DEFAULT_FROM_EMAIL = str(os.getenv('DEFAULT_FROM_EMAIL'))
 EMAIL_SUBJECT_PREFIX = 'CRM: '
 EMAIL_USE_TLS = True
 
-ADMINS = [("<Admin1>", "<admin1_box@example.com>")]   # specify admin
+ADMINS = [(os.environ.get('ADMIN_NAME1'), os.environ.get('ADMIN_EMAIL1'))]   # specify admin
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
